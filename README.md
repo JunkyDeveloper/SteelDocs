@@ -132,10 +132,12 @@ translations: {
 },
 ```
 
+For further guidance, feel free to consult the [documentation](https://starlight.astro.build/guides/i18n/) for i18n internationalization from Astro.
+
 ## How to use
 
 Inside the project folder run `bun dev` for hosting it locally. Keep in mind that this will sometimes mask errors, which will only be present when hosted somewhere like gh pages (fuck js).
-The rest should be handled by the `main` workflow.
+The rest should be handled by the `deploy` workflow.
 
 ## Project structure
 
