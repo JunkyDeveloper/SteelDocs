@@ -43,7 +43,7 @@ Static assets, like favicons, can be placed in the `public/` directory.
 
 ## Fork
 
-... the `main` branch of this repository, so you can prepare your changes on there locally. Clone it to your system by running the command
+... the `master` branch of this repository, so you can prepare your changes on there locally. Clone it to your system by running the command
 
 ```gitattributes
 git clone https://github.com/{your-name}/SteelDocs
@@ -76,7 +76,7 @@ Now set-up a new feature branch by running
 git checkout -b feat-{feature-name}
 ```
 
-from the `main` branch.
+from the `master` branch.
 
 ## Installation
 
@@ -122,7 +122,7 @@ sidebar:
 
 Here, useful information about the article is stored.
 
-Furthermore side-bar slugs are translated by adding an entry to the `translations` array inside the `sidebar` object, which can be found at `astro.config.mjs`, like this:
+Furthermore, side-bar slugs are translated by adding an entry to the `translations` array inside the `sidebar` object, which can be found at `astro.config.mjs`, like this:
 
 ```mjs
 label: 'Getting started',
