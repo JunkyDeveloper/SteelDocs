@@ -44,6 +44,31 @@ cargo build --release
 | `cargo test` | Run the test suite |
 | `cargo clippy` | Run the linter |
 
+### Build Features
+
+Steel supports optional build features that can be enabled with `--features`:
+
+```bash
+# Enable deadlock detection (debug only)
+cargo build --features deadlock_detection
+
+# Enable heap profiling with dhat
+cargo build --features dhat-heap
+
+# Disable the default mimalloc allocator
+cargo build --no-default-features
+```
+
+**Available features:**
+
+| Feature | Description |
+|---------|-------------|
+| `mimalloc` | Use mimalloc allocator (enabled by default) |
+| `deadlock_detection` | Enable parking_lot deadlock detection for debugging lock issues |
+| `dhat-heap` | Enable heap profiling with dhat |
+
+**Deadlock Detection** is particularly useful during development if you're experiencing hangs or suspect lock-related issues. When enabled, parking_lot will detect potential deadlocks and panic with diagnostic information.
+
 ## Running the Server
 
 ```bash
