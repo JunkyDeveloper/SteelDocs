@@ -137,6 +137,8 @@ translations: {
 Inside the project folder run `bun dev` for hosting it locally. Keep in mind that this will sometimes mask errors, which will only be present when hosted somewhere like gh pages (fuck js).
 The rest should be handled by the `main` workflow.
 
+## Project structure
+
 ```
 SteelDocs
 ├─ astro.config.ts
