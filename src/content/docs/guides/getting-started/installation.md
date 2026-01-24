@@ -36,13 +36,13 @@ cargo build --release
 
 ### Build Commands
 
-| Command | Purpose |
-|---------|---------|
-| `cargo build` | Debug build (faster compile, slower runtime) |
-| `cargo build --release` | Release build (slower compile, optimized) |
-| `cargo check` | Fast syntax and type checking |
-| `cargo test` | Run the test suite |
-| `cargo clippy` | Run the linter |
+| Command                 | Purpose                                      |
+| ----------------------- | -------------------------------------------- |
+| `cargo build`           | Debug build (faster compile, slower runtime) |
+| `cargo build --release` | Release build (slower compile, optimized)    |
+| `cargo check`           | Fast syntax and type checking                |
+| `cargo test`            | Run the test suite                           |
+| `cargo clippy`          | Run the linter                               |
 
 ### Build Features
 
@@ -61,11 +61,11 @@ cargo build --no-default-features
 
 **Available features:**
 
-| Feature | Description |
-|---------|-------------|
-| `mimalloc` | Use mimalloc allocator (enabled by default) |
+| Feature              | Description                                                     |
+| -------------------- | --------------------------------------------------------------- |
+| `mimalloc`           | Use mimalloc allocator (enabled by default)                     |
 | `deadlock_detection` | Enable parking_lot deadlock detection for debugging lock issues |
-| `dhat-heap` | Enable heap profiling with dhat |
+| `dhat-heap`          | Enable heap profiling with dhat                                 |
 
 **Deadlock Detection** is particularly useful during development if you're experiencing hangs or suspect lock-related issues. When enabled, parking_lot will detect potential deadlocks and panic with diagnostic information.
 
@@ -83,9 +83,10 @@ cargo run --release
 ```
 
 The server will:
+
 1. Create a `config/steel_config.json5` file if it doesn't exist
 2. Bind to `0.0.0.0:25565` by default
-3. Start accepting Minecraft 1.21.1 clients
+3. Start accepting Minecraft 1.21.11 clients
 
 ## Pre-built Binaries
 

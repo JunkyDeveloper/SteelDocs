@@ -24,7 +24,7 @@ On startup, Steel will:
 
 ## Connecting
 
-Use Minecraft Java Edition **1.21.1** to connect:
+Use Minecraft Java Edition **1.21.11** to connect:
 
 1. Open Minecraft and go to Multiplayer
 2. Add a server with address `localhost` (or your server's IP)
@@ -71,19 +71,22 @@ Steel supports different tick rate modes for debugging:
 ### Port Already in Use
 
 If you see a bind error, another process is using port 25565. Either:
+
 - Stop the other process
 - Change `server_port` in your config
 
 ### Client Can't Connect
 
 Ensure:
-- The client is running Minecraft 1.21.1
+
+- The client is running Minecraft 1.21.11
 - `online_mode` matches your setup (set to `false` for offline/cracked clients)
 - Firewall allows connections on the configured port
 
 ### Configuration Errors
 
 If Steel exits immediately, check the error message. Common issues:
+
 - `simulation_distance` greater than `view_distance`
 - `compression.threshold` less than 256
 - `enforce_secure_chat` enabled without `online_mode` and `encryption`

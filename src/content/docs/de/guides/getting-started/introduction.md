@@ -1,0 +1,67 @@
+---
+title: Einführung
+description: Lerne Steel kennen und wozu du es nutzen kannst.
+sidebar:
+  order: 0
+---
+
+Steel ist eine Rust-Implementierung des Minecraft-Java-Edition-Servers für die Version **1.21.11**.
+Es wurde mit Fokus auf maximale Performance, ein gutes Entwicklungserlebnis und minimale Fehleranfälligkeit konzipiert.
+
+## Was ist Steel?
+
+Steel ist eine von Grund auf neu entwickelte Implementierung des Minecraft-Serverprotokolls. Im Gegensatz zu klassischen Java-basierten Servern nutzt Steel die Speicher­sicherheitsgarantien und Zero-Cost-Abstraktionen von Rust, um außergewöhnliche Performance zu liefern.
+
+Der Server verwendet eine duale Async-Runtime-Architektur:
+
+- **Main Runtime** übernimmt Ticks, Networking und Spieler-Updates
+- **Chunk Runtime** kümmert sich um Chunk-Generierung und -Laden, ohne den Tick-Loop zu blockieren
+
+**Wichtig**: Die gesamte Spiellogik (Ticks, Weltzustand, Entities, Blöcke) ist synchron. Asynchron sind nur Netzwerk- und Festplatten-I/O. Dieses Design hält den Kern des Spiels deterministisch und gut nachvollziehbar.
+
+## Für wen ist Steel gedacht?
+
+### Server-Administratoren
+
+Wenn du einen Minecraft-Server betreibst und nach folgendem suchst:
+
+- **Höhere Leistung** - Lock-freie Datenstrukturen und effiziente Nebenläufigkeit
+- **Geringere Speichernutzung** - Rusts effizientes Memory-Management
+- **Zuverlässigkeit** - Speichersicherer Code bedeutet weniger Abstürze und Exploits
+
+### Entwickler
+
+Wenn du Tools baust oder an Server-Sotware mitarbeitest:
+
+- **Moderne Codebase** - Rust 2024 edition mit 9 fokussierten Workspace-Crates
+- **Typsicherheit** - Fehler werden zur Compile-Zeit erkannt, nicht erst zur Laufzeit
+- **Behavior system** - Erweiterbares Block- und Item-Verhalten
+
+## Aktuelle Features
+
+Steel unterstützt derzeit:
+
+- TCP-Networking mit Java-Edition-Clients
+- Mojang-Authentifizierung und Verschlüsselung
+- Zlib-Paketkompression
+- Weltgenerierung (Flat-Generator)
+- Chunk-Laden, -Generierung und -Persistenz
+- Platzieren und Abbauen von Blöcken
+- Spielerbewegung mit Kollisionsprüfung
+- Chat-System mit signierten Nachrichten
+- Inventar- und Container-Management (Truhen, Fässer)
+- Block-Entitäten
+- Eigenes Favicon und Server-Links
+
+## Der Stand der Dinge
+
+Steel befindet sich derzeit in aktiver Entwicklung (v0.0.0). Die Kernsysteme für Networking und Weltverwaltung funktionieren bereits, und grundlegende Gameplay-Mechaniken sind implementiert. Die neuesten Updates findest du im [GitHub-Repository](https://github.com/Steel-Foundation/SteelMC).
+
+## Community
+
+- **Discord**: https://discord.gg/MwChEHnAbh
+- **GitHub**: https://github.com/Steel-Foundation/SteelMC
+
+## Nächste Schritte
+
+Bereit loszulegen? Auf zum [Installations-Guide](/SteelDocs/getting-started/installation/).
