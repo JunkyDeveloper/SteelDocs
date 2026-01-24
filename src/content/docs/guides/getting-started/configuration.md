@@ -83,12 +83,15 @@ Server links appear in the player's pause menu:
     enable: true,
     links: [
       // Built-in label types
-      { label: "bug_report", url: "https://github.com/Steel-Foundation/SteelMC/issues" },
-      
+      {
+        label: "bug_report",
+        url: "https://github.com/Steel-Foundation/SteelMC/issues",
+      },
+
       // Custom styled labels
-      { 
-        label: { text: "Discord", color: "blue", bold: true }, 
-        url: "https://discord.gg/MwChEHnAbh" 
+      {
+        label: { text: "Discord", color: "blue", bold: true },
+        url: "https://discord.gg/MwChEHnAbh",
       },
     ],
   },
@@ -117,7 +120,10 @@ Server links appear in the player's pause menu:
   server_links: {
     enable: true,
     links: [
-      { label: "bug_report", url: "https://github.com/Steel-Foundation/SteelMC/issues" },
+      {
+        label: "bug_report",
+        url: "https://github.com/Steel-Foundation/SteelMC/issues",
+      },
     ],
   },
 }
@@ -127,14 +133,14 @@ Server links appear in the player's pause menu:
 
 Steel validates your configuration on startup:
 
-| Setting | Constraint |
-|---------|------------|
-| `server_port` | 1-65000 |
-| `view_distance` | 1-32 |
-| `simulation_distance` | 1-32, must be ≤ `view_distance` |
-| `compression.threshold` | ≥ 256 |
-| `compression.level` | 0-9 |
-| `enforce_secure_chat` | Requires `online_mode` and `encryption` to be `true` |
+| Setting                 | Constraint                                           |
+| ----------------------- | ---------------------------------------------------- |
+| `server_port`           | 1-65000                                              |
+| `view_distance`         | 1-32                                                 |
+| `simulation_distance`   | 1-32, must be ≤ `view_distance`                      |
+| `compression.threshold` | ≥ 256                                                |
+| `compression.level`     | 0-9                                                  |
+| `enforce_secure_chat`   | Requires `online_mode` and `encryption` to be `true` |
 
 If validation fails, the server will exit with an error message.
 
