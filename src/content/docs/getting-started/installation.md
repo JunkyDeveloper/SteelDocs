@@ -78,8 +78,15 @@ The `nightly` tag is available for plugin testing and early testing of upcoming 
 Run the Steel container with the server port exposed and local folders mounted for configuration and saves:
 
 ```bash
-docker run -d -p 25565:25565 -v ./config:/config -v ./saves:/saves -v ./logs:/logs ghcr.io/steel-foundation/steelmc:<version>
+docker run -d -it -p 25565:25565 -v ./config:/config -v ./saves:/saves -v ./logs:/logs --name steel-mc ghcr.io/steel-foundation/steelmc:<version>
 ```
+
+::tip
+To access the console of steel in the docker container the command is:
+```bash
+docker attach <steel-mc|container name>
+```
+:::
 
 :::note
 The docker pull for nightly is: `docker pull ghcr.io/steel-foundation/steelmc:nightly`
@@ -93,6 +100,9 @@ The same setup can be written as a Docker Compose service (Recommended):
 services:
   steel:
     image: ghcr.io/steel-foundation/steelmc:<version>
+    stdin_open: true
+    tty: true
+    container_name: steel-mc
     ports:
       - 25565:25565
     volumes:
