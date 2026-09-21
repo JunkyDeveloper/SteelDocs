@@ -5,7 +5,7 @@ description: A full guide on how to register a new item or block behavior in Ste
 
 ## Registration
 
-To register a block, add the attribute `block_behaviour`. Here is an example:
+To register a block, add the attribute `block_behavior`. Here is an example:
 
 ```rust
 // steel-core/src/behavior/blocks/vegetation/cactus_block.rs
@@ -19,7 +19,7 @@ pub struct CactusBlock {
 The generation script expects the block property for the block behavior. For item behavior this is not needed!
 :::
 
-In order to register an item instead, add the attribute `item_behaviour`, like this:
+In order to register an item instead, add the attribute `item_behavior`, like this:
 
 ```rust
 // steel-core/src/behavior/items/shovel.rs
@@ -135,6 +135,46 @@ pub struct ButtonBlock {
     sound_click_off: SoundEventRef,
 }
 ```
+
+### Integer providers
+
+Use `int_provider` when one constructor argument is a Vanilla `IntProvider` rather than a single integer. The attribute consumes one JSON property and generates one typed `IntProvider` argument.
+
+```rust
+// steel-core/src/behavior/blocks/building/drop_experience_block.rs
+#[block_behavior]
+pub struct DropExperienceBlock {
+    block: BlockRef,
+    #[json_arg(int_provider, json = "xp_range")]
+    experience: IntProvider,
+}
+```
+
+SteelExtractor writes the property using Vanilla's integer-provider codec shape. A constant provider is represented directly by an integer:
+
+```json
+{
+  "name": "iron_ore",
+  "class": "DropExperienceBlock",
+  "xp_range": 0
+}
+```
+
+A uniform provider is represented by a typed object:
+
+```json
+{
+  "name": "diamond_ore",
+  "class": "DropExperienceBlock",
+  "xp_range": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 3,
+    "max_inclusive": 7
+  }
+}
+```
+
+These generate `IntProvider::Constant(0)` and `IntProvider::Uniform { min_inclusive: 3, max_inclusive: 7 }`, respectively. Constant and uniform are the currently supported constructor-data shapes. Code generation fails for malformed or unsupported providers so a new Vanilla provider cannot silently receive the wrong distribution.
 
 ### Value of a registry
 
