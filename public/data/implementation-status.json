@@ -2,8 +2,8 @@
   "meta": {
     "source": "nightly",
     "steel_version": "0.15.3+mc26.2",
-    "steel_commit": "c599b635c61c2a1f6a0fda4546d8533ed088a42b",
-    "steel_committed_at": "2026-09-22T16:29:51+02:00"
+    "steel_commit": "26c8dd059bf8c1e5ab425bca963e40c1209771aa",
+    "steel_committed_at": "2026-09-22T17:10:33+02:00"
   },
   "blocks": {
     "GrassBlock": {
@@ -1947,7 +1947,7 @@
       ]
     },
     "GrindstoneBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "grindstone"
