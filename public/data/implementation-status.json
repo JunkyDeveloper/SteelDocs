@@ -2,8 +2,8 @@
   "meta": {
     "source": "nightly",
     "steel_version": "0.15.3+mc26.2",
-    "steel_commit": "88e6e2599f939060577eea248aece80ae82b10d4",
-    "steel_committed_at": "2026-09-14T19:36:43+02:00"
+    "steel_commit": "c599b635c61c2a1f6a0fda4546d8533ed088a42b",
+    "steel_committed_at": "2026-09-22T16:29:51+02:00"
   },
   "blocks": {
     "GrassBlock": {
@@ -869,7 +869,7 @@
       ]
     },
     "StainedGlassBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "white_stained_glass",
@@ -1272,7 +1272,7 @@
       ]
     },
     "BeaconBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "beacon"
@@ -5454,14 +5454,14 @@
       "implemented": true,
       "todos": [
         "Add the vanilla compound-NBT branch once Steel has an SNBT compound",
-        "Add `locate biome` once Steel has an asynchronous closest-biome search.",
-        "Add `locate poi` once Steel has a point-of-interest manager.",
-        "Add pagination for domains and worlds instead of truncating to the grid capacity.",
         "Add bossbar after Steel has a persistent custom-bossbar manager.",
         "Add entity after live entity NBT can reload every command-visible field.",
         "Add items after every vanilla command-slot provider and container inventory is",
         "Add predicate and function after their runtime registries are ported.",
-        "Restore Steel stopwatch conditions with the stopwatch command system."
+        "Restore Steel stopwatch conditions with the stopwatch command system.",
+        "Add `locate biome` once Steel has an asynchronous closest-biome search.",
+        "Add `locate poi` once Steel has a point-of-interest manager.",
+        "Add pagination for domains and worlds instead of truncating to the grid capacity."
       ],
       "entries": [
         "/execute"
