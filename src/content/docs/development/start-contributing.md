@@ -10,7 +10,7 @@ This guide assumes you already have knowledge about how to use Git and GitHub
 :::
 
 :::tip
-As a new contributor, please limit yourself to 3 open PRs at a time, so we can give you feedback on your existing ones before you open more.
+As a new contributor, please limit yourself to 3 open PRs at a time, so we can give feedback on your existing ones before you open more.
 
 Maintainers review PRs in their free time, so an initial review can take a while. If you haven't heard back after a week, ask on Discord or leave a comment on your PR to get our attention.
 :::
