@@ -2,8 +2,8 @@
   "meta": {
     "source": "nightly",
     "steel_version": "0.16.0+mc26.3",
-    "steel_commit": "6a2d5ef7ec669a821ae37465bf28e7c3ac9abfd3",
-    "steel_committed_at": "2026-10-18T17:27:43+02:00"
+    "steel_commit": "0473ad43b98aa51daa0298187115d78378323e95",
+    "steel_committed_at": "2026-10-19T18:15:03+02:00"
   },
   "blocks": {
     "GrassBlock": {
@@ -1337,7 +1337,7 @@
       ]
     },
     "ShelfMushroomBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "shelf_mushroom"
@@ -5109,7 +5109,9 @@
     },
     "ItemFrame": {
       "implemented": true,
-      "todos": [],
+      "todos": [
+        "Add interaction, drops, map tracking, and support checks."
+      ],
       "entries": [
         "item_frame"
       ]
@@ -5644,7 +5646,7 @@
   },
   "commands": {
     "/advancement": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "/advancement"
