@@ -2,8 +2,8 @@
   "meta": {
     "source": "nightly",
     "steel_version": "0.16.0+mc26.3",
-    "steel_commit": "0473ad43b98aa51daa0298187115d78378323e95",
-    "steel_committed_at": "2026-10-19T18:15:03+02:00"
+    "steel_commit": "6f63316778d48b1941ae703ab868ffb3ec6b0c0f",
+    "steel_committed_at": "2026-10-21T20:29:53+02:00"
   },
   "blocks": {
     "GrassBlock": {
@@ -1445,7 +1445,7 @@
       ]
     },
     "SkullBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "skeleton_skull",
@@ -1456,7 +1456,7 @@
       ]
     },
     "WallSkullBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "skeleton_wall_skull",
@@ -1466,35 +1466,39 @@
       ]
     },
     "WitherSkullBlock": {
-      "implemented": false,
-      "todos": [],
+      "implemented": true,
+      "todos": [
+        "Implement wither spawning behavior (block pattern check and actual spawning)"
+      ],
       "entries": [
         "wither_skeleton_skull"
       ]
     },
     "WitherWallSkullBlock": {
-      "implemented": false,
-      "todos": [],
+      "implemented": true,
+      "todos": [
+        "implement set_placed_by (requires WitherSkullBlock::check_spawn to be implemented)"
+      ],
       "entries": [
         "wither_skeleton_wall_skull"
       ]
     },
     "PlayerHeadBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "player_head"
       ]
     },
     "PlayerWallHeadBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "player_wall_head"
       ]
     },
     "PiglinWallSkullBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "piglin_wall_head"
@@ -4695,7 +4699,7 @@
       ]
     },
     "Bat": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "bat"
@@ -5173,8 +5177,11 @@
       ]
     },
     "MushroomCow": {
-      "implemented": false,
-      "todos": [],
+      "implemented": true,
+      "todos": [
+        "Route server-side LightningBolt hits here once that shared entity and dispatch exist.",
+        "Replace these local transfers with the shared conversion state transfer API."
+      ],
       "entries": [
         "mooshroom"
       ]
@@ -5663,15 +5670,15 @@
       "implemented": true,
       "todos": [
         "Add the vanilla compound-NBT branch once Steel has an SNBT compound",
-        "Add bossbar after Steel has a persistent custom-bossbar manager.",
-        "Add entity after live entity NBT can reload every command-visible field.",
         "Add items after every vanilla command-slot provider and container inventory is",
         "Add predicate and function after their runtime registries are ported.",
         "Restore Steel stopwatch conditions with the stopwatch command system.",
+        "Add bossbar after Steel has a persistent custom-bossbar manager.",
+        "Add entity after live entity NBT can reload every command-visible field.",
+        "Add pagination for domains and worlds instead of truncating to the grid capacity.",
         "Enforce the new game mode on online players when `force-gamemode=true` and return the",
         "Add `locate biome` once Steel has an asynchronous closest-biome search.",
-        "Add `locate poi` once Steel has a point-of-interest manager.",
-        "Add pagination for domains and worlds instead of truncating to the grid capacity."
+        "Add `locate poi` once Steel has a point-of-interest manager."
       ],
       "entries": [
         "/execute"
