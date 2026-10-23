@@ -2,8 +2,8 @@
   "meta": {
     "source": "nightly",
     "steel_version": "0.16.0+mc26.3",
-    "steel_commit": "f2fcd6a87837198d5e18afb3a4f91a0d882697f7",
-    "steel_committed_at": "2026-10-22T03:51:18+02:00"
+    "steel_commit": "5106c701c0da3c27ab8f2506f4a7c0010467982e",
+    "steel_committed_at": "2026-10-23T21:49:48+02:00"
   },
   "blocks": {
     "GrassBlock": {
@@ -4245,9 +4245,7 @@
     },
     "PotionItem": {
       "implemented": true,
-      "todos": [
-        "Add PotionItem's water default instance when Steel has item-specific"
-      ],
+      "todos": [],
       "entries": [
         "potion"
       ]
@@ -4481,12 +4479,8 @@
     "SplashPotionItem": {
       "implemented": true,
       "todos": [
-        "Implement inherited PotionItem.useOn water-to-mud conversion.",
-        "Implement ThrowablePotionItem use and dispenser behavior once",
-        "Add the inherited water default instance when Steel has item-specific",
-        "Implement inherited PotionItem.useOn water-to-mud conversion.",
-        "Implement ThrowablePotionItem use and dispenser behavior once",
-        "Add the inherited water default instance when Steel has item-specific"
+        "Implement the `ProjectileItem` dispenser dispatch.",
+        "Implement `use` and the `ProjectileItem` dispenser dispatch. Blocked on"
       ],
       "entries": [
         "splash_potion"
@@ -4502,7 +4496,6 @@
     "TippedArrowItem": {
       "implemented": true,
       "todos": [
-        "Add TippedArrowItem's poison default instance when Steel has",
         "Implement inherited ArrowItem projectile and dispenser behavior once"
       ],
       "entries": [
@@ -5285,7 +5278,7 @@
       ]
     },
     "ThrownSplashPotion": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "splash_potion"
@@ -5670,15 +5663,15 @@
       "implemented": true,
       "todos": [
         "Add the vanilla compound-NBT branch once Steel has an SNBT compound",
+        "Add bossbar after Steel has a persistent custom-bossbar manager.",
+        "Add entity after live entity NBT can reload every command-visible field.",
         "Add items after every vanilla command-slot provider and container inventory is",
         "Add predicate and function after their runtime registries are ported.",
         "Restore Steel stopwatch conditions with the stopwatch command system.",
-        "Add bossbar after Steel has a persistent custom-bossbar manager.",
-        "Add entity after live entity NBT can reload every command-visible field.",
-        "Add pagination for domains and worlds instead of truncating to the grid capacity.",
         "Enforce the new game mode on online players when `force-gamemode=true` and return the",
         "Add `locate biome` once Steel has an asynchronous closest-biome search.",
-        "Add `locate poi` once Steel has a point-of-interest manager."
+        "Add `locate poi` once Steel has a point-of-interest manager.",
+        "Add pagination for domains and worlds instead of truncating to the grid capacity."
       ],
       "entries": [
         "/execute"
@@ -5896,7 +5889,7 @@
       ]
     },
     "/swing": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "/swing"
