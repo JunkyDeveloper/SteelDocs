@@ -1,9 +1,9 @@
 {
   "meta": {
     "source": "nightly",
-    "steel_version": "0.16.0+mc26.3",
-    "steel_commit": "5106c701c0da3c27ab8f2506f4a7c0010467982e",
-    "steel_committed_at": "2026-10-23T21:49:48+02:00"
+    "steel_version": "0.16.1+mc26.3",
+    "steel_commit": "beba69c161c43887132ada970edb442c457365a2",
+    "steel_committed_at": "2026-10-25T01:13:39+02:00"
   },
   "blocks": {
     "GrassBlock": {
@@ -739,11 +739,7 @@
     },
     "StandingSignBlock": {
       "implemented": true,
-      "todos": [
-        "Implement dye sign applicators.",
-        "Play waxed sign interaction fail sound",
-        "Implement may_build check properly"
-      ],
+      "todos": [],
       "entries": [
         "oak_sign",
         "spruce_sign",
