@@ -33,7 +33,7 @@ Remember the path to the test folder, because the Flint config needs it.
 
 Flint reads its settings from a `.env` file and a `.toml` file. Values in the `.env` file override the ones in the `.toml` file. To get started, the `.toml` file is enough.
 
-Copy `flint.toml` and place it in the same directory, then set the only important setting: `test_path`. It points to your test folder.
+Copy `flint.toml.example` (rename it to `flint.toml`) and place it in the same directory, then set the only important setting: `test_path`. It points to your test folder.
 
 If you cloned FlintBenchmark next to the Steel repository, `flint.toml` should already be correct. Otherwise, we recommend an absolute path. A relative path works too, but an absolute path is easier to get right and less error-prone.
 
