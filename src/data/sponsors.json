@@ -1,0 +1,85 @@
+{
+  "updatedAt": "2026-10-25T04:00:00Z",
+  "sponsors": [
+    {
+      "login": "alice-miner",
+      "name": "Alice Miner",
+      "avatarUrl": "https://github.com/identicons/alice-miner.png",
+      "url": "https://github.com/alice-miner",
+      "active": true,
+      "since": "2026-01-01T00:00:00Z"
+    },
+    {
+      "login": "redstone-rick",
+      "name": "redstone_rick",
+      "avatarUrl": "https://github.com/identicons/redstone-rick.png",
+      "url": "https://github.com/redstone-rick",
+      "active": true,
+      "since": "2026-02-01T00:00:00Z"
+    },
+    {
+      "login": "creepercorp",
+      "name": "CreeperCorp",
+      "avatarUrl": "https://github.com/identicons/creepercorp.png",
+      "url": "https://github.com/creepercorp",
+      "active": true,
+      "since": "2026-03-01T00:00:00Z"
+    },
+    {
+      "login": "steve-builds",
+      "name": "Steve",
+      "avatarUrl": "https://github.com/identicons/steve-builds.png",
+      "url": "https://github.com/steve-builds",
+      "active": true,
+      "since": "2026-04-01T00:00:00Z"
+    },
+    {
+      "login": "notchfan",
+      "name": "Notch Fan",
+      "avatarUrl": "https://github.com/identicons/notchfan.png",
+      "url": "https://github.com/notchfan",
+      "active": true,
+      "since": "2026-05-01T00:00:00Z"
+    },
+    {
+      "login": "ferris-crab",
+      "name": "ferris",
+      "avatarUrl": "https://github.com/identicons/ferris-crab.png",
+      "url": "https://github.com/ferris-crab",
+      "active": true,
+      "since": "2026-06-01T00:00:00Z"
+    },
+    {
+      "login": "longname-user",
+      "name": "A very long display name for overflow testing",
+      "avatarUrl": "https://github.com/identicons/longname-user.png",
+      "url": "https://github.com/longname-user",
+      "active": true,
+      "since": "2026-07-01T00:00:00Z"
+    },
+    {
+      "login": "zombie42",
+      "name": "zombie42",
+      "avatarUrl": "https://github.com/identicons/zombie42.png",
+      "url": "https://github.com/zombie42",
+      "active": false,
+      "since": "2026-08-01T00:00:00Z"
+    },
+    {
+      "login": "pickaxe-pete",
+      "name": "Pickaxe Pete",
+      "avatarUrl": "https://github.com/identicons/pickaxe-pete.png",
+      "url": "https://github.com/pickaxe-pete",
+      "active": false,
+      "since": "2026-09-01T00:00:00Z"
+    },
+    {
+      "login": "enderman",
+      "name": "enderman",
+      "avatarUrl": "https://github.com/identicons/enderman.png",
+      "url": "https://github.com/enderman",
+      "active": false,
+      "since": "2026-01-01T00:00:00Z"
+    }
+  ]
+}
