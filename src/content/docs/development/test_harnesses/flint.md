@@ -74,6 +74,72 @@ Each of these three commands runs the selected tests (`test_run_flint_selected`)
 
 The output shows you which tests failed and gives you a link to Flint Viz. There you can see the tests in a graphical view, which helps you find out what went wrong in a failed test.
 
+### Configuration reference
+
+This is the full `flint.toml.example` from the `steel-flint` crate. Every setting is optional except `test_path`.
+
+```toml
+# Base URL of the flint-viz instance used in failure links.
+# Default: https://flinttestmc.github.io/FlintViz
+# viz_url = "http://localhost:7878"
+
+# Directory containing the flint tests. Env: TEST_PATH
+# Relative to the working directory (`cargo test` uses the crate dir, so this
+# points at a FlintBenchmark checkout next to the steel repo). Default: ./test
+test_path = "../../../FlintBenchmark/tests"
+
+# Filter priority (first match wins):
+#   test > tags (FLINT_TAGS, implemented_only, filter.tags) > pattern > all tests
+[filter]
+# Only run tests tagged with an implemented item, block or entity.
+implemented_only = true
+
+# Run a single test by file name (without `.json`). Env: FLINT_TEST
+# test = "place_fence"
+
+# Run tests whose file name matches a glob. Only `*` as prefix or suffix is
+# supported ("fence_*", "*_wall", "*"). Env: FLINT_PATTERN
+# pattern = "fence_*"
+
+# Run tests with these tags (only `true` entries are used).
+# Env: FLINT_TAGS="redstone,fence" (comma separated, replaces this table)
+# Ignored when `implemented_only = true`.
+# [filter.tags]
+# redstone = true
+# walls = false
+# fence = true
+```
+
+#### Settings
+
+| Setting | Environment variable | Default | Meaning |
+| --- | --- | --- | --- |
+| `viz_url` | `FLINT_VIZ_URL` | `https://flinttestmc.github.io/FlintViz` | Base URL of the Flint Viz instance. Failed tests print a link to this address. Set it to `http://localhost:7878` if you run Flint Viz yourself. |
+| `test_path` | `TEST_PATH` | `./test` | Folder that contains the Flint test files. A relative path starts at the `steel-flint` crate directory, not at the repository root, because `cargo test` runs there. The example value points to a FlintBenchmark checkout next to the Steel repository. |
+| `filter.implemented_only` | — | `false` | Only run tests that are tagged with an item, block, or entity that Steel has already implemented. Good default for daily work, because unfinished features do not fail. |
+| `filter.test` | `FLINT_TEST` | — | Run exactly one test, selected by its file name without `.json` (for example `place_fence`). |
+| `filter.pattern` | `FLINT_PATTERN` | — | Run all tests whose file name matches a glob. Only a `*` at the start or end is supported: `fence_*`, `*_wall`, or `*`. |
+| `[filter.tags]` | `FLINT_TAGS` | — | A table of tag names. Tests with a tag set to `true` run. Entries set to `false` are ignored. `FLINT_TAGS="redstone,fence"` (comma separated) replaces the whole table. Has no effect while `implemented_only = true`. |
+
+#### Filter priority
+
+If you set more than one filter, only the first match in this order is used:
+
+1. `test` (a single test)
+2. tags (`FLINT_TAGS`, `implemented_only`, `filter.tags`)
+3. `pattern`
+4. all tests
+
+For example, with `pattern = "fence_*"` and `implemented_only = true`, the pattern is ignored and the tag filter wins.
+
+#### Environment variables
+
+Environment variables (and values in your `.env` file) override `flint.toml`. This lets you change the selection for one run without editing the file:
+
+```
+FLINT_PATTERN="*_wall" cargo flint
+```
+
 ### More information
 
 More information is available in the [Flint docs](https://flinttestmc.github.io/FlintDocs/).
