@@ -160,7 +160,7 @@ export default defineConfig({
             [
               "development/start-contributing",
               "development/network/network",
-              "development/tools/steel_extractor",
+              "development/tools/steel_extractor"
             ],
           ),
         },
