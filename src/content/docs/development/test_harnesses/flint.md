@@ -1,5 +1,5 @@
 ---
-title: Test Harness Flint
+title: Flint
 description: How to use steel-flint
 ---
 
