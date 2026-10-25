@@ -156,6 +156,11 @@ export default defineConfig({
                 es: "Herramientas",
                 de: "Werkzeuge",
               },
+              test_harnesses: {
+                en: "Test Harnesses",
+                es: "Arneses de prueba",
+                de: "Testumgebungen",
+              },
             },
             [
               "development/start-contributing",
